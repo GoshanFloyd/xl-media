@@ -1,0 +1,107 @@
+@font-face {
+  font-family: Oswald;
+  src: url(../fonts/Oswald-Regular.ttf); }
+@font-face {
+  font-family: OswaldBold;
+  src: url(../fonts/Oswald-Bold.ttf); }
+@font-face {
+  font-family: OswaldLight;
+  src: url(../fonts/Oswald-Light.ttf); }
+@font-face {
+  font-family: OswaldExtraLight;
+  src: url(../fonts/Oswald-ExtraLight.ttf); }
+header {
+  background-image: url(../img/slide1.jpg);
+  background-size: cover;
+  background-position: center center; }
+  header .uk-slideshow li {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent; }
+    header .uk-slideshow li h2 {
+      font-family: OswaldLight;
+      color: white;
+      font-size: 8em;
+      line-height: 40px;
+      font-weight: 100;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #4c9601; }
+      @media (max-width: 768px) {
+        header .uk-slideshow li h2 {
+          font-size: 5em; } }
+    header .uk-slideshow li p {
+      font-family: Oswald;
+      color: white;
+      font-size: 2.2em;
+      font-weight: normal;
+      line-height: 40px;
+      text-shadow: 1px 1px 3px #4c9601; }
+      @media (max-width: 768px) {
+        header .uk-slideshow li p {
+          font-size: 1.6em; } }
+    header .uk-slideshow li a.question-link {
+      display: block;
+      font-family: OswaldLight;
+      color: white;
+      padding: 10px 15px;
+      font-size: 2em;
+      position: absolute;
+      bottom: 5%; }
+      header .uk-slideshow li a.question-link:after {
+        content: " ";
+        width: 0 !important;
+        height: 2px;
+        position: absolute;
+        background-color: white;
+        bottom: 10%;
+        left: 0;
+        transition: all 0.5s; }
+      header .uk-slideshow li a.question-link:hover {
+        text-decoration: none !important; }
+        header .uk-slideshow li a.question-link:hover:after {
+          width: 100% !important; }
+  header .uk-slidenav-previous {
+    left: 0 !important; }
+  header .uk-slidenav-next {
+    right: 0 !important; }
+  header .uk-slidenav-previous,
+  header .uk-slidenav-next {
+    color: white;
+    transition: all 0.3s !important; }
+    @media (max-width: 768px) {
+      header .uk-slidenav-previous,
+      header .uk-slidenav-next {
+        display: none !important; } }
+    header .uk-slidenav-previous:hover,
+    header .uk-slidenav-next:hover {
+      background: rgba(76, 150, 1, 0.8); }
+
+main .desktop-menu {
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 10px; }
+  main .desktop-menu .uk-navbar {
+    background: white !important;
+    padding: 10px 0; }
+  main .desktop-menu .uk-navbar-nav li {
+    position: relative; }
+    main .desktop-menu .uk-navbar-nav li:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      width: 100%;
+      background: #4c9601;
+      transition: all 0.3s; }
+    main .desktop-menu .uk-navbar-nav li:hover {
+      background: transparent !important; }
+      main .desktop-menu .uk-navbar-nav li:hover:after {
+        height: 3px; }
+    main .desktop-menu .uk-navbar-nav li a {
+      background: transparent !important;
+      height: 100% !important;
+      font-family: Oswald;
+      font-size: 1.3em; }
+
+/*# sourceMappingURL=app.css.map */
