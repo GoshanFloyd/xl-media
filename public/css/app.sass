@@ -14,14 +14,36 @@
   font-family: OswaldExtraLight
   src: url(../fonts/Oswald-ExtraLight.ttf)
 
+@font-face
+  font-family: Raleway
+  src: url(../fonts/Raleway-Regular.ttf)
+
+@font-face
+  font-family: RalewayBold
+  src: url(../fonts/Raleway-Bold.ttf)
+
+@font-face
+  font-family: RalewayLight
+  src: url(../fonts/Raleway-Light.ttf)
+
+@font-face
+  font-family: RalewayExtraLight
+  src: url(../fonts/Raleway-ExtraLight.ttf)
+
 $mainFont: Oswald
 $mainFontBold: OswaldBold
 $mainFontLight: OswaldLight
 $mainFontExtraLight: OswaldExtraLight
 
+$secondaryFont: Raleway
+$secondaryFontBold: RalewayBold
+$secondaryFontLight: RalewayLight
+$secondaryFontExtraLight: RalewayExtraLight
+
 $whiteColor: white
 $greenColor: #4c9601
 $grayColor: #eeeeee
+$blackColor: black
 
 header
   background-image: url(../img/slide1.jpg)
@@ -31,7 +53,7 @@ header
     li
       width: 100%
       height: 100vh
-      background-color: transparent
+      background: rgba($blackColor,.3)
       h2
         font-family: $mainFontLight
         color: $whiteColor
@@ -60,6 +82,14 @@ header
         font-size: 2em
         position: absolute
         bottom: 5%
+        @media(max-width: 768px)
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 100%
+          height: 50px
+          bottom: 0
+          background: rgba($blackColor,.4)
         &:after
           content: ' '
           width: 0 !important
@@ -118,4 +148,92 @@ main
           height: 100% !important
           font-family: $mainFont
           font-size: 1.3em
+  .main-content
+    margin-top: 60px
+    .main-content__title
+      font-family: $mainFontExtraLight
+      font-size: 3.5em
+      line-height: 40px
+    .main-content__article
+      font-family: $secondaryFont
+      font-size: 1.1em
+      line-height: 20px
+      max-width: 450px
+      margin: 40px auto
+
+  .main-custom
+    .item-custom
+      border: 1px solid rgba($greenColor,0.3)
+      padding: 15px 10px
+      margin-bottom: 15px
+      transition: all .3s
+      &:hover
+        background: $greenColor
+        h4,i,article
+          color: $whiteColor
+      h4
+        font-family: $mainFont
+        font-size: 1.4em
+        text-transform: uppercase
+        i
+          color: $greenColor
+      article
+        font-family: $secondaryFont
+        font-size: 1em
+  .main-last-project
+    background: url(../img/main-parallax.png)
+    background-repeat: no-repeat
+    background-size: cover
+    .main-last-project__background
+      background: rgba($blackColor,0.6)
+      padding: 60px 0
+    h3
+      font-family: $mainFont
+      font-size: 2.5em
+      color: $whiteColor
+      line-height: 40px
+      text-transform: uppercase
+      margin-bottom: 20px !important
+    article
+      font-family: $secondaryFont
+      font-size: 1.4em
+      color: $whiteColor
+      max-width: 460px
+      line-height: 25px
+      margin: 20px auto !important
+      text-shadow: 1px 1px 2px $blackColor
+    input[type='text']
+      box-sizing: border-box
+      background: rgba($blackColor,0.5)
+      border: 1px solid $whiteColor
+      width: 100%
+      padding: 5px
+      font-size: 1.5em
+      font-family: $mainFont
+      border-radius: 3px
+      color: $whiteColor
+    input[type='submit']
+      max-width: 354px
+      width: 100%
+      margin: 0 auto
+      display: block
+      box-sizing: border-box
+      background: $greenColor
+      border: 1px solid $whiteColor
+      font-size: 1.5em
+      font-family: $mainFont
+      border-radius: 3px
+      color: $whiteColor
+      padding: 5px
+    input
+      @media (max-width: 768px)
+        margin-bottom: 15px !important
+
+  .main-portfolio
+    padding: 40px 0
+    h3
+      font-family: $mainFontExtraLight
+      font-size: 3.5em
+      line-height: 50px
+      text-transform: uppercase
 

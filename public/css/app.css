@@ -10,6 +10,18 @@
 @font-face {
   font-family: OswaldExtraLight;
   src: url(../fonts/Oswald-ExtraLight.ttf); }
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Regular.ttf); }
+@font-face {
+  font-family: RalewayBold;
+  src: url(../fonts/Raleway-Bold.ttf); }
+@font-face {
+  font-family: RalewayLight;
+  src: url(../fonts/Raleway-Light.ttf); }
+@font-face {
+  font-family: RalewayExtraLight;
+  src: url(../fonts/Raleway-ExtraLight.ttf); }
 header {
   background-image: url(../img/slide1.jpg);
   background-size: cover;
@@ -17,7 +29,7 @@ header {
   header .uk-slideshow li {
     width: 100%;
     height: 100vh;
-    background-color: transparent; }
+    background: rgba(0, 0, 0, 0.3); }
     header .uk-slideshow li h2 {
       font-family: OswaldLight;
       color: white;
@@ -47,6 +59,15 @@ header {
       font-size: 2em;
       position: absolute;
       bottom: 5%; }
+@media(max-width: 768px) {
+  header .uk-slideshow li a.question-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); } }
       header .uk-slideshow li a.question-link:after {
         content: " ";
         width: 0 !important;
@@ -103,5 +124,90 @@ main .desktop-menu {
       height: 100% !important;
       font-family: Oswald;
       font-size: 1.3em; }
+main .main-content {
+  margin-top: 60px; }
+  main .main-content .main-content__title {
+    font-family: OswaldExtraLight;
+    font-size: 3.5em;
+    line-height: 40px; }
+  main .main-content .main-content__article {
+    font-family: Raleway;
+    font-size: 1.1em;
+    line-height: 20px;
+    max-width: 450px;
+    margin: 40px auto; }
+main .main-custom .item-custom {
+  border: 1px solid rgba(76, 150, 1, 0.3);
+  padding: 15px 10px;
+  margin-bottom: 15px;
+  transition: all 0.3s; }
+  main .main-custom .item-custom:hover {
+    background: #4c9601; }
+    main .main-custom .item-custom:hover h4, main .main-custom .item-custom:hover i, main .main-custom .item-custom:hover article {
+      color: white; }
+  main .main-custom .item-custom h4 {
+    font-family: Oswald;
+    font-size: 1.4em;
+    text-transform: uppercase; }
+    main .main-custom .item-custom h4 i {
+      color: #4c9601; }
+  main .main-custom .item-custom article {
+    font-family: Raleway;
+    font-size: 1em; }
+main .main-last-project {
+  background: url(../img/main-parallax.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  main .main-last-project .main-last-project__background {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 60px 0; }
+  main .main-last-project h3 {
+    font-family: Oswald;
+    font-size: 2.5em;
+    color: white;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin-bottom: 20px !important; }
+  main .main-last-project article {
+    font-family: Raleway;
+    font-size: 1.4em;
+    color: white;
+    max-width: 460px;
+    line-height: 25px;
+    margin: 20px auto !important;
+    text-shadow: 1px 1px 2px black; }
+  main .main-last-project input[type='text'] {
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    width: 100%;
+    padding: 5px;
+    font-size: 1.5em;
+    font-family: Oswald;
+    border-radius: 3px;
+    color: white; }
+  main .main-last-project input[type='submit'] {
+    max-width: 354px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    background: #4c9601;
+    border: 1px solid white;
+    font-size: 1.5em;
+    font-family: Oswald;
+    border-radius: 3px;
+    color: white;
+    padding: 5px; }
+  @media (max-width: 768px) {
+    main .main-last-project input {
+      margin-bottom: 15px !important; } }
+main .main-portfolio {
+  padding: 40px 0; }
+  main .main-portfolio h3 {
+    font-family: OswaldExtraLight;
+    font-size: 3.5em;
+    line-height: 50px;
+    text-transform: uppercase; }
 
 /*# sourceMappingURL=app.css.map */
