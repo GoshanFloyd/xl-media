@@ -136,6 +136,13 @@ main .main-content {
     line-height: 20px;
     max-width: 450px;
     margin: 40px auto; }
+@media (max-width: 768px) {
+  main .main-custom .uk-width-small-1-1:first-child {
+    order: 1; }
+  main .main-custom .uk-width-small-1-1:last-child {
+    order: 2; }
+  main .main-custom .uk-text-center {
+    order: 3; } }
 main .main-custom .item-custom {
   border: 1px solid rgba(76, 150, 1, 0.3);
   padding: 15px 10px;
@@ -149,11 +156,17 @@ main .main-custom .item-custom {
     font-family: Oswald;
     font-size: 1.4em;
     text-transform: uppercase; }
+    @media (max-width: 1024px) {
+      main .main-custom .item-custom h4 {
+        text-align: center !important; } }
     main .main-custom .item-custom h4 i {
       color: #4c9601; }
   main .main-custom .item-custom article {
     font-family: Raleway;
     font-size: 1em; }
+    @media (max-width: 1024px) {
+      main .main-custom .item-custom article {
+        text-align: center !important; } }
 main .main-last-project {
   background: url(../img/main-parallax.png);
   background-repeat: no-repeat;
@@ -208,6 +221,125 @@ main .main-portfolio {
     font-family: OswaldExtraLight;
     font-size: 3.5em;
     line-height: 50px;
+    margin-bottom: 40px;
     text-transform: uppercase; }
+  main .main-portfolio .uk-slider-container li {
+    box-sizing: border-box;
+    background-image: url(../img/portfolio-slider.jpg);
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    height: 500px !important; }
+    @media (max-width: 768px) {
+      main .main-portfolio .uk-slider-container li {
+        height: 350px; } }
+    main .main-portfolio .uk-slider-container li:hover .main-portfolio__overlay {
+      top: 0;
+      background: rgba(0, 0, 0, 0.6); }
+    main .main-portfolio .uk-slider-container li .main-portfolio__overlay {
+      padding: 10px;
+      box-sizing: border-box;
+      position: absolute;
+      overflow: hidden;
+      width: 100%;
+      top: 100%;
+      bottom: 0;
+      transition: all 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column; }
+      @media (max-width: 768px) {
+        main .main-portfolio .uk-slider-container li .main-portfolio__overlay {
+          top: 0;
+          background: rgba(0, 0, 0, 0.3); } }
+      main .main-portfolio .uk-slider-container li .main-portfolio__overlay h4 {
+        font-family: Oswald;
+        color: white;
+        font-size: 3em;
+        line-height: 1em;
+        margin-bottom: 30px; }
+      main .main-portfolio .uk-slider-container li .main-portfolio__overlay article {
+        font-family: Raleway;
+        color: white;
+        text-align: center;
+        font-size: 1.5em; }
+main .main-clients h3 {
+  font-family: OswaldExtraLight;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  line-height: 1.5em; }
+main .main-clients article {
+  font-family: Raleway;
+  font-size: 1.2em;
+  text-align: center;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto 20px; }
+main .main-clients .main-clients__slider h5 {
+  font-family: Oswald;
+  font-size: 1.8em;
+  margin-top: 5px !important; }
+main .main-clients .main-clients__slider p {
+  font-family: OswaldBold;
+  margin: 5px 0 0 0;
+  color: rgba(0, 0, 0, 0.7); }
+main .main-clients .main-clients__slider article {
+  box-sizing: border-box;
+  padding: 5px 10px;
+  font-size: 1.1em; }
+main .main-clients .main-clients__slider a.uk-slidenav-next,
+main .main-clients .main-clients__slider a.uk-slidenav-previous {
+  color: rgba(0, 0, 0, 0.7); }
+main .main-our-preferences {
+  background-image: url(../img/office.jpg); }
+  main .main-our-preferences .main-our-preferences__background {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5% 0; }
+    main .main-our-preferences .main-our-preferences__background .main-our-preferences-item {
+      padding: 20px 0;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-around;
+      border-radius: 10px;
+      box-sizing: border-box !important;
+      position: relative; }
+      @media (max-width: 768px) {
+        main .main-our-preferences .main-our-preferences__background .main-our-preferences-item {
+          height: auto; }
+          main .main-our-preferences .main-our-preferences__background .main-our-preferences-item:last-child {
+            margin-top: 30px; } }
+      main .main-our-preferences .main-our-preferences__background .main-our-preferences-item h5 {
+        font-family: Oswald;
+        text-align: center;
+        font-size: 2em;
+        box-sizing: border-box !important;
+        line-height: 30px; }
+@media(max-width: 768px) {
+  main .main-our-preferences .main-our-preferences__background .main-our-preferences-item h5 {
+    font-size: 1.8em !important;
+    padding: 0 10px; } }
+      main .main-our-preferences .main-our-preferences__background .main-our-preferences-item ul {
+        list-style-type: decimal;
+        padding-right: 30px;
+        box-sizing: border-box !important; }
+        main .main-our-preferences .main-our-preferences__background .main-our-preferences-item ul li {
+          font-family: Raleway;
+          font-size: 1.6em;
+          margin-bottom: 10px;
+          line-height: 20px; }
+      main .main-our-preferences .main-our-preferences__background .main-our-preferences-item.white-background {
+        background: rgba(255, 255, 255, 0.6); }
+        main .main-our-preferences .main-our-preferences__background .main-our-preferences-item.white-background h5 {
+          color: black; }
+        main .main-our-preferences .main-our-preferences__background .main-our-preferences-item.white-background ul li {
+          color: black; }
+      main .main-our-preferences .main-our-preferences__background .main-our-preferences-item.black-background {
+        background: rgba(0, 0, 0, 0.6); }
+        main .main-our-preferences .main-our-preferences__background .main-our-preferences-item.black-background h5 {
+          color: white; }
+        main .main-our-preferences .main-our-preferences__background .main-our-preferences-item.black-background ul li {
+          color: white; }
 
 /*# sourceMappingURL=app.css.map */
